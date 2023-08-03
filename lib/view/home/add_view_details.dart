@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:tex/utils/resources/app_dimens.dart';
+import 'package:tex/view/home/adhoc_work.dart';
+import 'package:tex/view/home/business_expense.dart';
 import 'package:tex/view/home/employment_details.dart';
+import 'package:tex/view/home/leave_deatils.dart';
 import 'package:tex/view/home/view_holiday.dart';
 
 import '../../utils/resources/app_colors.dart';
 import '../widgets/custom_button.dart';
+import 'adhoc_income_details.dart';
 import 'historical_details.dart';
 
 class AddViewDetails extends StatefulWidget {
@@ -43,7 +47,12 @@ class _AddViewDetailsState extends State<AddViewDetails> {
                   width: AppDimension.width(context) * 0.8,
                   child: CustomButton(
                     bgColor: AppColors.pageBackground,
-                    onClick: () {},
+                    onClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LeaveDetails()));
+                    },
                     text: 'Leave Details',
                   ),
                 ),
@@ -52,7 +61,12 @@ class _AddViewDetailsState extends State<AddViewDetails> {
                   width: AppDimension.width(context) * 0.8,
                   child: CustomButton(
                     bgColor: AppColors.pageBackground,
-                    onClick: () {},
+                    onClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AdhocIncomeDetails()));
+                    },
                     text: 'Adhoc Income',
                   ),
                 ),
@@ -61,7 +75,12 @@ class _AddViewDetailsState extends State<AddViewDetails> {
                   width: AppDimension.width(context) * 0.8,
                   child: CustomButton(
                     bgColor: AppColors.pageBackground,
-                    onClick: () {},
+                    onClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BusinessExpenses()));
+                    },
                     text: 'Business Expense',
                   ),
                 ),
@@ -84,7 +103,12 @@ class _AddViewDetailsState extends State<AddViewDetails> {
                   width: AppDimension.width(context) * 0.8,
                   child: CustomButton(
                     bgColor: AppColors.pageBackground,
-                    onClick: () {},
+                    onClick: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AdhocWork()));
+                    },
                     text: 'Adhoc  Work Hours',
                   ),
                 ),
